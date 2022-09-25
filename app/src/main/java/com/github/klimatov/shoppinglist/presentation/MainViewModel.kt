@@ -16,7 +16,7 @@ class MainViewModel: ViewModel(){
     private val deleteShopItemUseCase = DeleteShopItemUseCase(repository)
     private val editShopItemUseCase = EditShopItemUseCase(repository)
 
-    val shopList = getShopListUseCase.getShopList()
+    val shopList = getShopListUseCase.getShopList() // слушаемая из активити LIveData
 
     fun deleteShopItem(shopItem: ShopItem) {
         deleteShopItemUseCase.deleteShopItem(shopItem)
